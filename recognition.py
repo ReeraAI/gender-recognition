@@ -70,7 +70,7 @@ if __name__ == "__main__":
         file = files[randint(0, len(files) - 1)]
         print("Voice:", file)
     
-    from utils import load_data, split_data, create_model
+    from utils import create_model
 
     # construct the model
     model = create_model()
