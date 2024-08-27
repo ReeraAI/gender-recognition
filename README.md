@@ -10,10 +10,6 @@ This repository is about building a deep learning model using TensorFlow to reco
 - Pandas
 - Librosa
 
-Cloning the repository:
-
-    git clone https://github.com/RiraAI/gender-recognition
-
 Installing the required libraries:
 
     pip3 install -r requirements.txt
