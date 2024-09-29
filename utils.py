@@ -1,5 +1,5 @@
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, LSTM, Dropout
+from tensorflow.keras.layers import Dense, LSTM, Dropout, Input
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
@@ -74,7 +74,8 @@ def create_model(vector_length=128):
     """5 hidden dense layers from 256 units to 64, not the best model, but not bad."""
 
     model = Sequential()
-    model.add(Dense(256, input_shape=(vector_length,)))
+    model.add(Input(shape=(vector_length,)))
+    model.add(Dense(256, activation="relu"))
     model.add(Dropout(0.3))
     model.add(Dense(256, activation="relu"))
     model.add(Dropout(0.3))
